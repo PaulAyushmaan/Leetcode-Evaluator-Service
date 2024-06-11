@@ -1,0 +1,32 @@
+{
+	"name": "evaluator-service",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "npx tsc",
+		"watch": "npx tsc -w",
+		"prestart": "npm run build",
+		"start": "npx nodemon dist/index.js",
+		"dev": "npx concurrently --kill-others \"npm run watch\" \"npm run start\""
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@bull-board/express": "^5.17.1",
+		"@types/express": "^4.17.21",
+		"eslint-plugin-simple-import-sort": "^12.1.0",
+		"nodemon": "^3.1.0",
+		"typescript": "^5.4.5"
+	},
+	"dependencies": {
+		"@types/ioredis": "^5.0.0",
+		"bullmq": "^5.7.8",
+		"concurrently": "^8.2.2",
+		"dotenv": "^16.4.5",
+		"eslint": "^9.2.0",
+		"express": "^4.19.2",
+		"ioredis": "^5.4.1"
+	}
+}
